@@ -1,0 +1,52 @@
+- columns to remove:
+    DATECANCELLED: values are irrelavent
+    PRJCOMPLETEDATE: most values are missing/values are irrelavent
+    PROBADDTYPE: irrelavant information
+    PROBZIP: a lot of missing values
+    PROBCITY: it's redundant, each request was made in the same city(st. louis)
+    PROBLEMCODE: this column has the same information as the DESCRIPTION colmumn, but the values are abbreviated.
+    SRX: can't convert values
+    SRY: can't convert values
+    
+    
+- columns to rename:
+    DATETIMEINIT > Date Requested
+    DATETIMECLOSED > Date Closed
+    DESCRIPTION > Request Type
+    PROBADDRESS > Address
+    REQUESTID > Request ID
+    CALLERTYPE > Comm Type
+    NEIGHBORHOOD > Neighborhood
+    WARD > Ward
+    STATUS > Status
+    SUBMITTO > Department
+
+
+loop through rows:
+    for index, row in years.iterrows():
+    
+    
+rows:
+      row['Comm Type'],
+      row['Date Done'],
+      row['Date Closed'],
+      row['Date Requested'],
+      row['Request Type'],
+      row['Neighborhood'],
+      row['Address'],
+      row['Request ID'],
+      row['Status'],
+      row['Department'],
+      row['Ward']
+          
+wards to remove:
+    7 & 6
+    9 & 20
+    6 & 7
+    9 & 7
+    11 or 12
+    16,10,23
+    13 & 11
+    003
+    a
+    7 & 9
